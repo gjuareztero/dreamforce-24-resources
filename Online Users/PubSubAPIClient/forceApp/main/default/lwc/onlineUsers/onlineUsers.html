@@ -1,0 +1,13 @@
+<template>
+    <template lwc:if={displayOnlineUsers}>
+        <div class="slds-box">
+            <template for:each={usersWithDetails} for:item="user">
+                <span key={user.Id}>
+                    <lightning-avatar src={user.SmallPhotoUrl} initials={user.Initials__c}
+                        fallback-icon-name="custom:custom92" variant="circle"
+                        alternative-text={user.Name}></lightning-avatar>
+                </span>
+            </template>
+        </div>
+    </template>
+</template>
